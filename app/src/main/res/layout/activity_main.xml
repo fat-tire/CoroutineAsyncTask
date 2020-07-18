@@ -1,16 +1,28 @@
 <?xml version="1.0" encoding="utf-8"?>
 <LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:tools="http://schemas.android.com/tools"
     xmlns:app="http://schemas.android.com/apk/res-auto"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     android:orientation="vertical">
 
     <TextView
+        android:id="@+id/header"
+        android:textAlignment="center"
+        android:layout_gravity="center"
+        android:padding="8sp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_margin="8dp"
+        android:background="@color/primary_dark"
+        android:textColor="@color/primary_light"
+        android:textSize="20sp" />
+
+    <TextView
         android:id="@+id/output"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
         android:layout_margin="8dp"
+        android:text="This demo app demonstrates two potential drop-in replacement options for the now-deprecated ASyncTask class.\n\n\The first, CoroutinesASyncTask, is written in Kotlin and uses coroutines.\n\nThe second, RxSyncTask, is written in java and uses RxJava.\n\nTry 'em both! There are two sample activities, one showing how they are used in Kotlin, the other in Java."
         android:textColor="@color/primary_text"
         android:textSize="25sp" />
 
@@ -50,9 +62,19 @@
         android:textAlignment="center"
         android:textColor="@color/primary_text"
         android:textSize="16sp" />
+
+    <com.google.android.material.button.MaterialButton
+        android:id="@+id/btn2"
+        android:layout_width="wrap_content"
         android:layout_height="wrap_content"
+        android:layout_gravity="center"
         android:layout_marginTop="8dp"
-        android:textColor="#FF8A80"
-        android:textSize="25sp"/>
+        app:backgroundTint="@color/primary_light"
+        android:gravity="center_horizontal"
+        android:onClick="launchOtherActivity"
+        android:text="(Switch to Java Activity)"
+        android:textAlignment="center"
+        android:textColor="@color/primary_text"
+        android:textSize="16sp" />
 
 </LinearLayout>

@@ -12,4 +12,5 @@
 
 -keep class androidx.renderscript.** { *; }
 
-
+-dontwarn java.util.concurrent.Flow*
+-keepclassmembers class io.reactivex.rxjava3.disposables.RunnableDisposable { private *; }
